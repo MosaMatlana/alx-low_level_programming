@@ -1,25 +1,28 @@
 #include "main.h"
+
 /**
- * _strncpy - Copies src to dest
- * @dest: New string
- * @src: String to be copied
- * @n: Number of bytes of src to be concatinated with dest
+ * _strncpy - a function ...
+ * @dest: the chaine
+ * @src: the chaine
+ * @n: the number
  *
- * Return: New dest
+ * Return: 1 or 0
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char	*_strncpy(char *dest, char *src, int n)
 {
-	int j = 0;
+	int	i;
 
-	while (j < n)
+	i = 0;
+	while (i < n && src[i])
 	{
-		if (src[j] != '\0')
-			dest[j] = src[j];
-		j++;
+		dest[i] = src[i];
+		i++;
 	}
-	while (j < n)
-		dest[j] = '\0';
-	j++;	
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
