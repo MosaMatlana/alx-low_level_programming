@@ -1,1 +1,1 @@
-intro to C Programming
+Exploring argc and argv arguments to main func
